@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="articleController"
+		class="com.sbs.board.article.controller.ArticleController">
+		<property name="service" ref="articleService" />
+	</bean>
+
+	<bean id="articleService"
+		class="com.sbs.board.article.service.ArticleService">
+		<property name="dao" ref="articleDao1" />
+	</bean>
+	
+	<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+</beans>
+
+	<bean id="articleDao1"
+		class="com.sbs.board.article.dao.ArticleDao2" />
+	<bean id="articleDao2"
+		class="com.sbs.board.article.dao.ArticleDao" />
+
+</beans>
