@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- ArticleMapper 인터페이스와 해당 파일을 연결 -->
+<mapper namespace="home.db.article.ArticleMapper">
+
+	<!-- sql을 태그로 구조화 해서 관리. id : 인터페이스와 연결될 때 구별되어 사용될 이름. resultType : sql이 
+		처리되고 나오게 되는 결과를 정의. 패키지명을 모두 적는다. parameterType : sql에 필요한 외부 데이터(파라미터)를 
+		세팅할 때 외부데이터의 타입 -->
+	<select id="selectArticle" resultType="home.db.article.Article"
+		parameterType="int">
+		select * from article where id = #{id}
+	</select>
+
+	<select id="selectArticleList" resultType="home.db.article.Article">
+		SELECT * FROM article
+	</select>
+
+	<!-- 수행하고자 하는 sql에 따라 태그명도 바뀜. select : 조회 delete : 삭제 update : 수정 insert 
+		: 추가 -->
+	<delete id="deleteArticle" parameterType="int">
+		DELETE FROM article WHERE id = #{id}
+	</delete>
+
+	<insert id="insertArticle" parameterType="map">
+		INSERT INTO article
+		SET title = #{title},
+		`body` = #{body},
+		memberId = #{memberId},
+		hit = 0,
+		regDate = NOW()
+	</insert>
+	
+	<update id="updateArticle" parameterType="map">
+		UPDATE article
+		SET title = #{title},
+		`body` = #{body}
+		WHERE id = #{id}
+	</update>
+</mapper>
