@@ -1,0 +1,175 @@
+@font-face {
+  font-family: 'Godo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Godo';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
+}
+
+html > body, html > body .toastui-editor-contents, html > body .ProseMirror {
+ font-family: 'Godo', sans-serif;
+ text-underline-position: under;
+}
+
+html > body .toastui-editor-contents, html > body .ProseMirror {
+	font-size: 1.25rem;
+	text-align: left;
+}
+
+html > body .toast-ui-viewer .toastui-editor-contents {
+	text-align: center;
+}
+
+.table-box-type-1 > table {
+	width: 100%;
+}
+ 
+.table-box-type-1 > table th, .table-box-type-1 > table td {
+	border:1px solid rgba(31, 41, 55, 0.2);
+	padding: 10px;
+	text-align: center;
+}
+
+.btn-text-link {
+	color: black;
+}
+
+.btn-text-link:hover {
+	color: olive;
+	text-decoration: underline;
+}
+
+html[data-theme="dark"] :is(.table-box-type-1>table th, .table-box-type-1>table td) {
+	border-color: rgba(166, 173, 186, 0.2);
+}
+
+html>body .toast-ui-viewer {
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.theme-toggle .fa-solid{
+	display: none;
+}
+
+html[data-theme="dark"] .theme-toggle .fa-solid {
+  display:inline;
+}
+
+html[data-theme="dark"] .theme-toggle .fa-regular {
+  display:none;
+}
+
+body {
+	min-width: 800px;
+}
+
+.modal-exam {
+	font-size: 3rem;
+}
+
+.layer {
+	display: none;
+	width: 500px;
+	height: 500px;
+	background-color: black;
+	color: white;
+	border: 10px solid green;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.layer > h2{
+	padding: 20px;
+}
+
+.layer > .close-btn {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	border: 5px solid white;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.layer-bg {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .4);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.toggle-btn {
+	width: 100px;
+	height: 100px;
+	bottom: 20px;
+	right: 150px;
+	position: absolute;
+}
+
+.toggle-btn>div {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	width: 100%;
+	height: 10%;
+	background-color: white;
+	transition: transform .3s cubic-bezier(1, -0.96, .03, 1.35), top .3s cubic-bezier(1, .09, 0, 1.25);
+	transform: translateX(-50%) translateY(-50%) rotate(0);
+}
+
+.toggle-btn>div:last-child {
+	top: 70%;
+	transform: translateX(-50%) translateY(-50%) rotate(0);
+}
+
+.toggle-btn.active>div {
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.toggle-btn.active>div:last-child {
+	transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+ 
+.close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: inline-block;
+	padding: 1px 5px;
+	font-weight: 700;
+	text-shadow: 0 1px 0 #fff;
+	font-size: 1.3rem;
+}
+ 
+.close:hover {
+	border: 0;
+	cursor: pointer;
+	opacity: .75;
+}
+
+.border-bottom-line {
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.rounded-circle {
+	border-radius: 50%;
+}
+
+
+
+
+
+
