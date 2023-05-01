@@ -8,7 +8,7 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: mailtestcjh@gmail.com
+    username: mailtestoyr@gmail.com
     password: xohvhfpztqxdzaqo
     properties:
       mail:
@@ -26,9 +26,9 @@ spring:
     username: root
     password: 
 mybatis:
-  type-aliases-package: com.cjh.exam.demo.vo
+  type-aliases-package: com.oyr.exam.demo.vo
 custom:
-  genFileDirPath: C:\work_cjh\sts-4.15.3.RELEASE-workspace
+  genFileDirPath: C:\work_oyr\sts-4.15.3.RELEASE-workspace
   siteName: SB_AM
   siteMainUri: http://localhost:8084
   emailFrom: no-reply@localhost
