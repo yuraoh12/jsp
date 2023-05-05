@@ -1,7 +1,7 @@
 # DB 삭제/생성/선택
-DROP DATABASE IF EXISTS SB_AM_cjh;
-CREATE DATABASE SB_AM_cjh;
-USE SB_AM_cjh;
+DROP DATABASE IF EXISTS SB_AM_oyr;
+CREATE DATABASE SB_AM_oyr;
+USE SB_AM_oyr;
 
 # article 테이블 생성
 CREATE TABLE article(
@@ -57,7 +57,7 @@ loginPw = 'admin',
 `name` = '관리자',
 nickname = '관리자',
 cellphoneNum = '01011112222',
-email = 'http-@naver.com';
+email = 'aaabbbccc@naver.com';
 
 INSERT INTO `member`
 SET regDate = NOW(),
@@ -67,7 +67,7 @@ loginPw = 'test1',
 `name` = '유저1',
 nickname = '유저1',
 cellphoneNum = '01022223333',
-email = 'http-@naver.com';
+email = 'aaabbbccc@naver.com';
 
 INSERT INTO `member`
 SET regDate = NOW(),
@@ -77,7 +77,7 @@ loginPw = 'test2',
 `name` = '유저2',
 nickname = '유저2',
 cellphoneNum = '01033334444',
-email = 'http-@naver.com';
+email = 'aaabbbccc@naver.com';
 
 ALTER TABLE article ADD COLUMN memberId INT UNSIGNED NOT NULL AFTER updateDate;
 
