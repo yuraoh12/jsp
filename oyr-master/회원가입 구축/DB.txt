@@ -220,7 +220,7 @@ relTypeCode = 'article',
 relId = 1,
 `body` = '댓글 4';
 
-ALTER TABLE `SB_AM_cjh`.`reply` ADD INDEX (`relTypeCode` , `relId`);
+ALTER TABLE `SB_AM_oyr`.`reply` ADD INDEX (`relTypeCode` , `relId`);
 
 # 부가정보테이블
 CREATE TABLE attr (
